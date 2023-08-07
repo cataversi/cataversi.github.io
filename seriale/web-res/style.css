@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+	--theme-main-dark: #35155D;
+	--theme-main-light: #512B81;
+	--theme-secondary-dark: #4477CE;
+	--theme-secondary-light: #8CABFF;
+	--theme-secondary-light-hover: #9FB8FC;
+	--theme-body-color: #fff;
+}
+
+body {
+  user-select: none;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--theme-main-dark);
+  color: var(--theme-body-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  max-width: 1600px;
+  height: 600px;
+}
+
+.video-player {
+  flex: 2;
+  background-color: #000;
+}
+
+#videoPlayer {
+  width: 100%;
+  height: 100%;
+}
+
+.playlist {
+  flex: 1;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  background-color: var(--theme-main-light);
+}
+
+.playlist li {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.playlist li:hover {
+  background-color: var(--theme-main-dark);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-secondary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-secondary-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-secondary-light-hover);
+}

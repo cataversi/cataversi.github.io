@@ -1,0 +1,8 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1205199,RESOLUTION=854x480,FRAME-RATE=25.000,CODECS="avc1.64001e,mp4a.40.2"
+https://vod3ro.antenaplay.ro/antena1/2023/08/02/3ec2d3a8f1a2d93e51f87129fb38af2ddfb246563b5a03bc4406655ea597d7bd_480p-wide.mp4/index-v1-a1.m3u8?starttime=1691219487&endtime=1691226687&source=web&token=L_vTZoEajf3hRtvfCbWvjYIvoso=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2513518,RESOLUTION=1280x720,FRAME-RATE=25.000,CODECS="avc1.64001f,mp4a.40.2"
+https://vod3ro.antenaplay.ro/antena1/2023/08/02/3ec2d3a8f1a2d93e51f87129fb38af2ddfb246563b5a03bc4406655ea597d7bd_720p-wide.mp4/index-v1-a1.m3u8?starttime=1691219487&endtime=1691226687&source=web&token=L_vTZoEajf3hRtvfCbWvjYIvoso=
+
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=231820,RESOLUTION=854x480,CODECS="avc1.64001e",URI="https://vod3ro.antenaplay.ro/antena1/2023/08/02/3ec2d3a8f1a2d93e51f87129fb38af2ddfb246563b5a03bc4406655ea597d7bd_480p-wide.mp4/iframes-v1-a1.m3u8?starttime=1691219487&endtime=1691226687&source=web&token=L_vTZoEajf3hRtvfCbWvjYIvoso="
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=408618,RESOLUTION=1280x720,CODECS="avc1.64001f",URI="https://vod3ro.antenaplay.ro/antena1/2023/08/02/3ec2d3a8f1a2d93e51f87129fb38af2ddfb246563b5a03bc4406655ea597d7bd_720p-wide.mp4/iframes-v1-a1.m3u8?starttime=1691219487&endtime=1691226687&source=web&token=L_vTZoEajf3hRtvfCbWvjYIvoso="

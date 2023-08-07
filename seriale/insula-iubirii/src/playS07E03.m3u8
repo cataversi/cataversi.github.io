@@ -1,0 +1,8 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1354811,RESOLUTION=854x480,FRAME-RATE=25.000,CODECS="avc1.64001e,mp4a.40.2"
+https://vod9uswest.antenaplay.ro/antena1/2023/06/27/eb41427a89b4cef8cd2a7537bb0f50eb879cf17432f6f745916e344d31d19d4a_480p-wide.mp4/index-v1-a1.m3u8?starttime=1691390937&endtime=1691398137&source=web&token=AH-v55yIBj3UuTYT4uWKyDz-Z_Y=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2654312,RESOLUTION=1280x720,FRAME-RATE=25.000,CODECS="avc1.64001f,mp4a.40.2"
+https://vod9uswest.antenaplay.ro/antena1/2023/06/27/eb41427a89b4cef8cd2a7537bb0f50eb879cf17432f6f745916e344d31d19d4a_720p-wide.mp4/index-v1-a1.m3u8?starttime=1691390937&endtime=1691398137&source=web&token=AH-v55yIBj3UuTYT4uWKyDz-Z_Y=
+
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=242038,RESOLUTION=854x480,CODECS="avc1.64001e",URI="https://vod9uswest.antenaplay.ro/antena1/2023/06/27/eb41427a89b4cef8cd2a7537bb0f50eb879cf17432f6f745916e344d31d19d4a_480p-wide.mp4/iframes-v1-a1.m3u8?starttime=1691390937&endtime=1691398137&source=web&token=AH-v55yIBj3UuTYT4uWKyDz-Z_Y="
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=423261,RESOLUTION=1280x720,CODECS="avc1.64001f",URI="https://vod9uswest.antenaplay.ro/antena1/2023/06/27/eb41427a89b4cef8cd2a7537bb0f50eb879cf17432f6f745916e344d31d19d4a_720p-wide.mp4/iframes-v1-a1.m3u8?starttime=1691390937&endtime=1691398137&source=web&token=AH-v55yIBj3UuTYT4uWKyDz-Z_Y="
