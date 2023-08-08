@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insula Iubirii S07 | Revised</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #effaff;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10%;
+            background-color: white;
+            color: #333;
+        }
+        #videoContainer {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #videoSelector {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #00b2ff;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <select id="videoSelector">
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E01.m3u8">Episode 1</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E02.m3u8">Episode 2</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E03.m3u8">Episode 3</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E04.m3u8">Episode 4</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E05.m3u8">Episode 5</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E06.m3u8">Episode 6</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E07.m3u8">Episode 7</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E08.m3u8">Episode 8</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E09.m3u8">Episode 9</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E10.m3u8">Episode 10</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E11.m3u8">Episode 11</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E12.m3u8">Episode 12</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E13.m3u8">Episode 13</option>
+            <option value="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E14.m3u8">Episode 14</option>
+            <!-- Add more episodes as needed -->
+        </select>
+    </div>
+
+    <div id="videoContainer">
+        <video id="videoPlayer" controls crossorigin playsinline></video>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+    <script>
+        const videoSelector = document.getElementById("videoSelector");
+        const videoPlayer = document.getElementById("videoPlayer");
+        const hls = new Hls();
+        hls.attachMedia(videoPlayer);
+
+        videoSelector.addEventListener("change", () => {
+            const selectedVideo = videoSelector.value;
+            if (Hls.isSupported()) {
+                hls.loadSource(selectedVideo);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    videoPlayer.play();
+                });
+            }
+        });
+
+        // Autoplay the first video on page load
+        videoSelector.dispatchEvent(new Event("change"));
+
+        const player = new Plyr(videoPlayer);
+    </script>
+</body>
+</html>
