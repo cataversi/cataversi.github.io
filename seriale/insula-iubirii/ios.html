@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS | Insula Iubirii | Sezonul 7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .playlist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+        }
+
+        .playlist-item {
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .playlist-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video id="player" controls>
+            Your browser does not support the video tag.
+        </video>
+        <ul class="playlist">
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E01.m3u8">Episode 1</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E02.m3u8">Episode 2</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E03.m3u8">Episode 3</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E04.m3u8">Episode 4</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E05.m3u8">Episode 5</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E06.m3u8">Episode 6</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E07.m3u8">Episode 7</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E08.m3u8">Episode 8</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E09.m3u8">Episode 9</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E10.m3u8">Episode 10</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E11.m3u8">Episode 11</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E12.m3u8">Episode 12</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E13.m3u8">Episode 13</li>
+            <li class="playlist-item" data-source="https://raw.githubusercontent.com/cataversi/cataversi.github.io/main/seriale/insula-iubirii/src/playS07E14.m3u8">Episode 14</li>
+        </ul>
+    </div>
+    <script>
+        const player = document.getElementById("player");
+        const playlistItems = document.querySelectorAll(".playlist-item");
+
+        playlistItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const source = item.getAttribute("data-source");
+                if (source) {
+                    player.src = source;
+                    player.load();
+                    player.play();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
